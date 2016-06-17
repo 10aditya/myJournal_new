@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    android:background="#e0e0e0"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.obtestatus.myjournal.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/vieww"
+        android:gravity="top"
+        android:background="#ffffff"
+        android:elevation="9dp"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="199dp"
+            android:layout_height="45dp"
+            android:src="@drawable/titleimage">
+        </ImageView>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginRight="16dp"
+        android:background="#ffffffff"
+        android:layout_below="@id/vieww"
+        android:layout_marginTop="6dp"
+        android:elevation="9dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/relativeLayout2">
+
+
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="TITLE"
+                android:textColorHint="#757575"
+                android:textColor="@color/fontc"
+                android:maxLength="60"
+                android:id="@+id/editText1"></EditText>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/frame"
+                android:layout_toEndOf="@+id/editText1"
+                android:layout_height="match_parent"></FrameLayout>
+
+            <EditText
+                android:hint="MOOD"
+                android:textColorHint="#757575"
+                android:layout_width="170dp"
+                android:maxLength="10"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:layout_below="@+id/editText1"/>
+
+            <EditText
+                android:hint="DATE"
+                android:textColorHint="#757575"
+                android:inputType="date"
+                android:textColor="@color/fontc"
+                android:layout_width="110dp"
+                android:maxLength="10"
+                android:id="@+id/editText5"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/editText2"
+                android:layout_below="@+id/editText1"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HighLights :"
+        android:textStyle="bold"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/fontc"
+        android:id="@+id/h_text"
+        android:layout_below="@+id/relativeLayout2"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/h_text"
+        android:minLines="12"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/editText3"
+        android:elevation="10dp"
+        android:background="#ffffffff"
+        android:gravity="start|top"
+        android:textColor="@color/fontc"
+        android:textSize="20sp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:id="@+id/button15"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editText3" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/button16"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

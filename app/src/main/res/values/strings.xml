@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">myJournal</string>
+    <string name="mood1">HAPPY</string>
+    <string name="mood2">SAD</string>
+    <string name="mood3">ANGRY</string>
+    <string name="mood4">BLISSFUL</string>
+    <string name="mood5">EXITED</string>
+    <string name="mood6">ALONE</string>
+    <string name="mood7">STRESSED</string>
+    <string name="mood8">SHOCKED</string>
+    <string name="mood9">APOLOGETIC</string>
+    <string name="mood10">GUILTY</string>
+    <string name="mood11">SATISFIED</string>
+    <string name="mood12">CRAZY</string>
+    <string name="mood13">BORED</string>
+</resources>
