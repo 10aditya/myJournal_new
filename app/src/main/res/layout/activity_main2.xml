@@ -1,42 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relativeLayout3"
     android:background="#e0e0e0"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+
     tools:context="com.obtestatus.myjournal.Main2Activity">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/title_bar"
-        android:gravity="top"
+        android:layout_alignParentTop="true"
         android:background="#ffffff"
         android:elevation="9dp"
-        android:layout_alignParentTop="true"
+        android:gravity="top"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_marginRight="199dp"
             android:layout_height="45dp"
-            android:src="@drawable/titleimage">
-        </ImageView>
+            android:layout_marginRight="199dp"
+            android:src="@drawable/titleimage"></ImageView>
     </android.support.v7.widget.Toolbar>
 
+    <ListView
+        android:id="@+id/my_List_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addbutton"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/layout_color"
+        android:elevation="16dp" />
 
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <TextView
+        android:background="#fa404342"
+        android:id="@+id/emptyTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addbutton"
+        android:layout_below="@+id/title_bar"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="No Entries!\nPress '+' to add new Entry"
+        android:textSize="20dp" />
+
+    <TextView
+
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/addbutton"
+        android:background="@color/layout_color"
+        android:elevation="16dp"
+        android:gravity="center"
+        android:text="New Text"
+        android:textColor="@color/fontc"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.FloatingActionButton
         android:id="@+id/addbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="4dp"
-        android:background="@drawable/plus_icon"/>
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/m_c24"
+        app:elevation="16dp"
+        app:fabSize="normal" />
 
 </RelativeLayout>

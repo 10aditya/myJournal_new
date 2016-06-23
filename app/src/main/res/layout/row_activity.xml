@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout7"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="#ffffff"
+    tools:context="com.obtestatus.myjournal.Main3Activity">
 
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/entry_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/fontc"
+        android:textSize="17dp" />
+
+    <TextView
+        android:id="@+id/entry_date"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/fontc"
+        android:textSize="17dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"></View>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/entry_frame"
+        android:layout_toEndOf="@+id/entry_title"></FrameLayout>
+
+
+</RelativeLayout>

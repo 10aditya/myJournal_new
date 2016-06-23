@@ -15,4 +15,18 @@
     <color name="m_c9">@android:color/holo_purple</color>
     <color name="m_c10">#f50057</color>
     <color name="m_c11">#4dd0e1</color>
+    <color name="m_c12">#aeea00</color>
+    <color name="m_c13">#3e2723</color>
+    <color name="m_c14">#6200ea</color>
+    <color name="m_c15">#f50057</color>
+    <color name="m_c16">#00695c</color>
+    <color name="m_c17">#ef9a9a</color>
+    <color name="m_c18">#4d116e</color>
+    <color name="m_c19">#f57f17</color>
+    <color name="m_c20">#0000ff</color>
+    <color name="m_c21">#69f0ae</color>
+    <color name="m_c22">#a72a2c</color>
+    <color name="m_c23">#05055b</color>
+    <color name="m_c24">#03a9f4</color>
+    <color name="layout_color">#ffffff</color>
 </resources>
