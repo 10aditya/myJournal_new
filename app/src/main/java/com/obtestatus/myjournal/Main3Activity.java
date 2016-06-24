@@ -85,6 +85,7 @@ Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Main3Activity.this, Main2Activity.class));
+                finish();
             }
         });
 
@@ -149,6 +150,7 @@ Main3Activity extends AppCompatActivity {
             myDB.close();
             Toast.makeText(Main3Activity.this, "Entry Deleted...", Toast.LENGTH_LONG).show();
             startActivity(new Intent(Main3Activity.this, Main2Activity.class));
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

@@ -3,9 +3,7 @@ package com.obtestatus.myjournal;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,6 +33,8 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        //SharedPreferences mpref = PreferenceManager.getDefaultSharedPreferences(this);
+       // String username2 = mpref.getString("user_name", "User");
         db = new MyDB(this);
         myEntries2 = (ListView) findViewById(R.id.my_List_View);
         usern = (TextView) findViewById(R.id.username);
@@ -69,17 +69,17 @@ public class Main2Activity extends AppCompatActivity {
 }
     public void setRemainder(){
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, 16);
-        calendar.set(Calendar.MINUTE, 14);
+        calendar.set(Calendar.HOUR_OF_DAY, 17);
+        calendar.set(Calendar.MINUTE, 26);
         calendar.set(Calendar.SECOND, 00);
 
         Intent notificationMessage = new Intent(Main2Activity.this, NotificationHelper.class);
 
-        PendingIntent pi = PendingIntent.getBroadcast(this, 0, notificationMessage, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pi = PendingIntent.getBroadcast(this, 0, notificationMessage, 0);
 
         AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
 
-        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 20*1000, AlarmManager.INTERVAL_DAY, pi);
+        am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pi);
 
 
     }

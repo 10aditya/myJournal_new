@@ -25,8 +25,8 @@ public class NotificationHelper extends BroadcastReceiver{
         Log.d("Notificationhelper","Notification Set");
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("How was your day")
+                .setSmallIcon(R.drawable.ic_import_contacts_black_24dp)
+                .setContentTitle("How was your day?")
                 .setContentText("Day becomes Memory");
         builder.setContentIntent(pendingIntent);
         builder.setDefaults(Notification.DEFAULT_SOUND);

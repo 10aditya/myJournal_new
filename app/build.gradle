@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.obtestatus.myjournal"
-        minSdkVersion 18
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
-        versionName "1.2"
+        versionName "1.3"
     }
     buildTypes {
         release {
